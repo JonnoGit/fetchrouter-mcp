@@ -1,0 +1,29 @@
+{
+  "name": "fetchrouter",
+  "displayName": "Fetch Router",
+  "version": "0.1.1",
+  "description": "Verified web fetch for Claude Code: detects block pages, CAPTCHAs and empty JavaScript shells, falls back to a headless browser, and bills only for pages that load.",
+  "author": { "name": "One + Done LLC", "email": "hello@fetchrouter.dev", "url": "https://fetchrouter.dev" },
+  "homepage": "https://fetchrouter.dev",
+  "repository": "https://github.com/JonnoGit/fetchrouter-mcp",
+  "license": "MIT",
+  "keywords": ["web-fetch", "scraping", "mcp", "headless-browser", "block-detection"],
+  "documentationUrl": "https://fetchrouter.dev/docs#mcp",
+  "supportUrl": "https://github.com/JonnoGit/fetchrouter-mcp/issues",
+  "mcpServers": {
+    "fetchrouter": {
+      "type": "http",
+      "url": "https://fetchrouter.dev/mcp",
+      "headers": { "Authorization": "Bearer ${user_config.api_key}" }
+    }
+  },
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "Fetch Router API key",
+      "description": "Free key with 500 credits at https://fetchrouter.dev/#signup (starts with fr_)",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}

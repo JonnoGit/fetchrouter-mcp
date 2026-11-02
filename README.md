@@ -30,6 +30,13 @@ claude mcp add --transport http fetchrouter https://fetchrouter.dev/mcp --header
 
 Other clients: URL `https://fetchrouter.dev/mcp`, header `Authorization: Bearer fr_...` (or `X-API-Key: fr_...`).
 
+**Claude Code plugin** (MCP server plus a `verified-fetch` skill; asks for your key once and stores it securely):
+
+```sh
+claude plugin marketplace add JonnoGit/fetchrouter-mcp
+claude plugin install fetchrouter@fetchrouter
+```
+
 **Local (stdio via npx).**
 
 ```json

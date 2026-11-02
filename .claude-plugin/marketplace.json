@@ -1,0 +1,15 @@
+{
+  "name": "fetchrouter",
+  "description": "Fetch Router plugins for Claude Code: verified web fetch for agents.",
+  "owner": {
+    "name": "One + Done LLC",
+    "email": "hello@fetchrouter.dev"
+  },
+  "plugins": [
+    {
+      "name": "fetchrouter",
+      "source": "./",
+      "description": "Verified web fetch: detects blocks and empty JS pages, falls back to a browser, bills only on success."
+    }
+  ]
+}
