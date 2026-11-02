@@ -1,0 +1,60 @@
+{
+  "name": "fetchrouter-mcp",
+  "version": "0.1.1",
+  "description": "MCP server for Fetch Router: verified web fetch for AI agents. Detects block pages, CAPTCHAs and empty JS shells, falls back to a headless browser, bills only for pages that load.",
+  "mcpName": "dev.fetchrouter/fetchrouter-mcp",
+  "type": "module",
+  "bin": {
+    "fetchrouter-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "prepublishOnly": "tsc -p .",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "agent-tools",
+    "ai-agents",
+    "captcha",
+    "claude",
+    "cloudflare",
+    "fetch",
+    "firecrawl-alternative",
+    "headless-browser",
+    "jina-reader-alternative",
+    "markdown",
+    "mcp",
+    "model-context-protocol",
+    "playwright",
+    "scraping",
+    "web-fetch",
+    "web-scraping"
+  ],
+  "homepage": "https://fetchrouter.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonnoGit/fetchrouter-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonnoGit/fetchrouter-mcp/issues"
+  },
+  "author": "One + Done LLC <hello@fetchrouter.dev>",
+  "license": "MIT"
+}
