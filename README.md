@@ -55,7 +55,7 @@ Claude Code: `claude mcp add fetchrouter -e FETCHROUTER_API_KEY=fr_... -- npx -y
 
 ## Tools
 
-- **`fetch_page`** `(url, mode?, expect_text?, expect_selector?, max_cost?)`: returns markdown (default) or HTML, plus which route delivered it and what was tried. `max_cost` caps credits: 1 = plain HTTP only, 5 (default) allows a browser. If the page can't be loaded, the error says why (`blocked:cloudflare`, `http_404`, `expect_text_missing`…) and nothing is billed.
+- **`fetch_page`** `(url, mode?, expect_text?, expect_selector?, max_cost?)`: returns markdown (default) or HTML, plus which route delivered it and what was tried. `max_cost` caps credits: 1 = plain HTTP only, 2 (default) allows a browser. If the page can't be loaded, the error says why (`blocked:cloudflare`, `http_404`, `expect_text_missing`…) and nothing is billed.
 - **`domain_reliability`** `(domain)`: pass rate per route for a site over the last 30 days, from real verified fetches. Free, no key needed.
 
 ## How well does it work?
@@ -64,7 +64,7 @@ A fixed list of 166 public pages in six site types is fetched every night with p
 
 ## Pricing
 
-1 credit ($0.001) per static page, 5 per browser-rendered page, failures free. Details: https://fetchrouter.dev/#pricing
+1 credit ($0.001) per static page, 2 per browser-rendered page, failures free. Details: https://fetchrouter.dev/#pricing
 
 ## Environment (stdio)
 

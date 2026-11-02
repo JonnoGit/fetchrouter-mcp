@@ -8,7 +8,7 @@ description: Fetch a web page and confirm it really loaded, using the Fetch Rout
 Use the `fetch_page` tool from the `fetchrouter` MCP server.
 
 1. If you know text that must be on the right page (a product name, a heading, a price label), pass it as `expect_text`. The fetch then fails, unbilled, if that text is missing.
-2. Leave `max_cost` at the default (5) so a headless browser is tried when plain HTTP fails. Use `max_cost: 1` when a static page is enough and you're fetching many URLs.
+2. Leave `max_cost` at the default (2) so a headless browser is tried when plain HTTP fails. Use `max_cost: 1` when a static page is enough and you're fetching many URLs.
 3. For a hard site, call `domain_reliability` first (free) to see which route has worked recently.
 4. If the result says `Not fetched`, read the reason:
    - `blocked:<vendor>`: the site blocks automated access. Don't retry with the same settings. Tell the user, or try another source.

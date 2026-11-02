@@ -27,7 +27,7 @@ export function registerTools(server: McpServer, call: ApiCall, opts: ToolOption
         mode: z.enum(["markdown", "html", "rendered"]).optional().describe("markdown (default, main content), html (raw page), rendered (always use a browser)"),
         expect_text: z.string().optional().describe("Text that must appear on the page for it to count as loaded, e.g. a product name"),
         expect_selector: z.string().optional().describe("CSS selector that must match"),
-        max_cost: z.number().int().min(1).max(25).optional().describe("Most credits to pay: 1 static only, 5 (default) allows a browser, 10-25 allows premium unblocking"),
+        max_cost: z.number().int().min(1).max(25).optional().describe("Most credits to pay: 1 static only, 2 (default) allows a browser, 10-25 allows premium unblocking"),
       },
       annotations: { readOnlyHint: true, openWorldHint: true },
     },
