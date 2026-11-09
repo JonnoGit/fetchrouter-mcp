@@ -20,7 +20,7 @@ Agents often get a `200 OK` that is really a Cloudflare challenge, a DataDome bl
 
 ## Setup
 
-Get a free key (500 credits, no card) at https://fetchrouter.dev/#signup.
+Works without a key, up to 25 free pages a day per IP address. For more, get a free key (500 credits, no card) at https://fetchrouter.dev/#signup.
 
 **Remote (no install).** Streamable HTTP at `https://fetchrouter.dev/mcp`, with your key in a header:
 
@@ -28,9 +28,15 @@ Get a free key (500 credits, no card) at https://fetchrouter.dev/#signup.
 claude mcp add --transport http fetchrouter https://fetchrouter.dev/mcp --header "Authorization: Bearer fr_..."
 ```
 
-Other clients: URL `https://fetchrouter.dev/mcp`, header `Authorization: Bearer fr_...` (or `X-API-Key: fr_...`).
+Or try it with no key (the free daily allowance):
 
-**Claude Code plugin** (MCP server plus a `verified-fetch` skill; asks for your key once and stores it securely):
+```sh
+claude mcp add --transport http fetchrouter https://fetchrouter.dev/mcp
+```
+
+Other clients: URL `https://fetchrouter.dev/mcp`, optional header `Authorization: Bearer fr_...` (or `X-API-Key: fr_...`).
+
+**Claude Code plugin** (MCP server plus a `verified-fetch` skill; asks once for an optional key and stores it securely):
 
 ```sh
 claude plugin marketplace add JonnoGit/fetchrouter-mcp
@@ -51,7 +57,7 @@ claude plugin install fetchrouter@fetchrouter
 }
 ```
 
-Claude Code: `claude mcp add fetchrouter -e FETCHROUTER_API_KEY=fr_... -- npx -y fetchrouter-mcp`
+Claude Code: `claude mcp add fetchrouter -e FETCHROUTER_API_KEY=fr_... -- npx -y fetchrouter-mcp`. Leave out the key (`-e …`, or the `env` block) to use the free daily allowance.
 
 ## Tools
 
@@ -70,7 +76,7 @@ A fixed list of 166 public pages in six site types is fetched every night with p
 
 | Variable | Default |
 |---|---|
-| `FETCHROUTER_API_KEY` | required |
+| `FETCHROUTER_API_KEY` | optional (without it: 25 free pages a day) |
 | `FETCHROUTER_BASE_URL` | `https://fetchrouter.dev` |
 | `FETCHROUTER_MAX_CHARS` | `60000` (longer pages are truncated) |
 

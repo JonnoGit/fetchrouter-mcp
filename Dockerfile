@@ -1,4 +1,4 @@
-# Builds the stdio MCP server from source. Starts without a key (tools then return a "set FETCHROUTER_API_KEY" hint).
+# Builds the stdio MCP server from source. Works without a key (a free daily allowance); set FETCHROUTER_API_KEY for more.
 FROM node:22-slim
 WORKDIR /app
 COPY package.json tsconfig.json ./

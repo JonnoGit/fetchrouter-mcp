@@ -8,18 +8,20 @@
     "url": "https://github.com/JonnoGit/fetchrouter-mcp",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "fetchrouter-mcp",
-      "version": "0.1.1",
-      "transport": { "type": "stdio" },
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "name": "FETCHROUTER_API_KEY",
-          "description": "Fetch Router API key (free, 500 credits): https://fetchrouter.dev/#signup",
-          "isRequired": true,
+          "description": "Optional. Without it you get 25 free pages a day; a free key (500 credits) lifts that: https://fetchrouter.dev/#signup",
+          "isRequired": false,
           "isSecret": true
         }
       ]
@@ -32,8 +34,8 @@
       "headers": [
         {
           "name": "X-API-Key",
-          "description": "Fetch Router API key (free, 500 credits): https://fetchrouter.dev/#signup",
-          "isRequired": true,
+          "description": "Optional. Without it you get 25 free pages a day; a free key (500 credits) lifts that: https://fetchrouter.dev/#signup",
+          "isRequired": false,
           "isSecret": true
         }
       ]

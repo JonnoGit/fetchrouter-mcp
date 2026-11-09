@@ -1,6 +1,6 @@
 {
   "name": "fetchrouter-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for Fetch Router: verified web fetch for AI agents. Detects block pages, CAPTCHAs and empty JS shells, falls back to a headless browser, bills only for pages that load.",
   "mcpName": "dev.fetchrouter/fetchrouter-mcp",
   "type": "module",
